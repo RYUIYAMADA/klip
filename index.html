@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Klip v0.14.0 — コピーした全部が、すぐ戻る。</title>
+  <meta name="description" content="コピーするたび履歴が溜まる。⌘⇧V で呼び出してすぐ貼れる。サブスク不要・完全ローカルの macOS クリップボードマネージャー。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ナビバー -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="nav-logo" href="#">
+        <!-- クリップボードアイコン（モノクロ線） -->
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <rect x="9" y="2" width="6" height="4" rx="1"/>
+          <path d="M7 4H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-2"/>
+          <line x1="9" y1="12" x2="15" y2="12"/>
+          <line x1="9" y1="16" x2="13" y2="16"/>
+        </svg>
+        Klip
+      </a>
+      <a class="nav-cta" href="https://github.com/RYUIYAMADA/klip/releases/latest">ダウンロード</a>
+    </div>
+  </nav>
+
+  <!-- ヒーロー -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-eyebrow">
+        <!-- macOS ロゴ的な線アイコン -->
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <rect x="2" y="3" width="20" height="14" rx="2"/>
+          <line x1="8" y1="21" x2="16" y2="21"/>
+          <line x1="12" y1="17" x2="12" y2="21"/>
+        </svg>
+        macOS クリップボードマネージャー v0.14.0
+      </div>
+
+      <h1>コピーするたび履歴が溜まる。<br><em>⌘⇧V で呼び出してすぐ貼れる。</em></h1>
+
+      <p class="hero-lead">
+        テキスト・画像・リンク・ファイル——何でも自動で記録。<br>
+        横スクロールのカード型一覧から選ぶだけ。<br>
+        サブスクなし・完全ローカル・プライバシー安心。
+      </p>
+
+      <a class="hero-cta" href="https://github.com/RYUIYAMADA/klip/releases/latest">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+          <polyline points="7 10 12 15 17 10"/>
+          <line x1="12" y1="15" x2="12" y2="3"/>
+        </svg>
+        Klip-v0.14.0.zip をダウンロード
+      </a>
+      <p class="hero-cta-note">無料・サブスクなし・macOS 14 以降対応</p>
+
+      <!-- スクリーンショット（defaultビュー） -->
+      <div class="app-mock">
+        <div class="app-mock-bar">
+          <div class="mock-dots">
+            <div class="mock-dot r"></div>
+            <div class="mock-dot y"></div>
+            <div class="mock-dot g"></div>
+          </div>
+          <span class="app-mock-title">Klip</span>
+        </div>
+        <img
+          src="assets/klip-showcase-default.png"
+          alt="Klipのメイン画面 — 横スクロールのカード型クリップボード履歴"
+          width="900"
+          height="480"
+        >
+      </div>
+    </div>
+  </section>
+
+  <!-- 主要機能カード -->
+  <section class="features">
+    <div class="container">
+      <p class="section-label">主要機能</p>
+      <h2 class="section-title">コピーした全部が手元に残る。</h2>
+
+      <div class="features-grid">
+        <!-- 1. 横スクロールカード -->
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="2" y="7" width="6" height="10" rx="1"/>
+              <rect x="10" y="7" width="6" height="10" rx="1"/>
+              <rect x="18" y="7" width="4" height="10" rx="1"/>
+              <polyline points="5 4 2 7 5 10"/>
+              <polyline points="19 4 22 7 19 10"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">横スクロールカード型履歴</h3>
+          <p class="feature-desc">
+            ⌘⇧V で下部からスライドイン。コピーした順に並んだカード型の一覧から
+            ← → で選んで Enter で貼り付け。マウスも不要。
+          </p>
+        </div>
+
+        <!-- 2. ボード -->
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="3" y="3" width="7" height="7" rx="1"/>
+              <rect x="14" y="3" width="7" height="7" rx="1"/>
+              <rect x="3" y="14" width="7" height="7" rx="1"/>
+              <rect x="14" y="14" width="7" height="7" rx="1"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">用途別ボード（辞書）</h3>
+          <p class="feature-desc">
+            流れて消えない保存棚。定型文・ハピネッツ素材・リンク集など用途ごとに整理して
+            いつでも呼び出せる。チームへの共有もファイル1つで完結。
+          </p>
+        </div>
+
+        <!-- 3. クイックアクション -->
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">クイックアクション</h3>
+          <p class="feature-desc">
+            ⌘O でリンク・ファイル・画像を即開く。⌘E でテキスト変換（大文字化・トリム・JSON整形）して貼り付け。
+            画像の中の文字も OCR 検索できる（完全ローカル）。
+          </p>
+        </div>
+
+        <!-- 4. チーム共有 -->
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">チーム共有（Drive 経由）</h3>
+          <p class="feature-desc">
+            ボードをファイルで書き出し → Google Drive で配布 → 各自が取り込む。
+            サーバー・月額費用・アカウント不要。パスワード付き AES-GCM 暗号化対応。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 検索スクリーンショット（機能ビジュアル） -->
+  <section class="search-section">
+    <div class="container">
+      <div class="search-layout">
+        <div class="search-info">
+          <p class="section-label">インライン検索</p>
+          <h2 class="section-title-left">文字を打つだけで絞り込む。<br>画像の中の文字も検索対象。</h2>
+          <p class="search-desc">
+            パネルを開いたまま文字を入力すると即座にフィルタリング。
+            コピーした画像に写っているテキストも OCR（完全ローカル・Vision）で
+            インデックス化されているため、検索にかかります。
+          </p>
+          <ul class="search-feature-list">
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              テキスト・コード・リンク・カラー・画像すべて対象
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              画像内テキストも OCR 検索（ローカル処理・外部送信なし）
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              ⌘1〜⌘9 で検索結果の先頭 9 件を即貼り付け
+            </li>
+          </ul>
+        </div>
+        <div class="search-visual">
+          <div class="app-mock-small">
+            <div class="app-mock-bar">
+              <div class="mock-dots">
+                <div class="mock-dot r"></div>
+                <div class="mock-dot y"></div>
+                <div class="mock-dot g"></div>
+              </div>
+              <span class="app-mock-title">Klip — 検索</span>
+            </div>
+            <img
+              src="assets/klip-showcase-search.png"
+              alt="Klipの検索画面 — キーワードでクリップボード履歴を絞り込んでいる状態"
+              width="640"
+              height="340"
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ショートカット早見表 -->
+  <section class="shortcuts">
+    <div class="container">
+      <p class="section-label">ショートカット</p>
+      <h2 class="section-title">キーボードだけで完結する。</h2>
+
+      <div class="shortcut-table-wrap">
+        <table class="shortcut-table">
+          <thead>
+            <tr>
+              <th>キー</th>
+              <th>動作</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><kbd>⌘ ⇧ V</kbd></td>
+              <td>Klip パネルを開く / 閉じる</td>
+            </tr>
+            <tr>
+              <td><kbd>← →</kbd></td>
+              <td>カードを前後に選択移動</td>
+            </tr>
+            <tr>
+              <td><kbd>Enter</kbd></td>
+              <td>選択したクリップを貼り付け</td>
+            </tr>
+            <tr>
+              <td><kbd>⌘ ⇧ ↩</kbd></td>
+              <td>書式を除いてプレーンテキストで貼り付け</td>
+            </tr>
+            <tr>
+              <td><kbd>⌘ 1〜9</kbd></td>
+              <td>先頭から N 番目のクリップを即貼り付け</td>
+            </tr>
+            <tr>
+              <td><kbd>⌘ B</kbd></td>
+              <td>選択クリップをボードへ追加</td>
+            </tr>
+            <tr>
+              <td><kbd>⇥ Tab</kbd></td>
+              <td>すべて / ボードを切り替え</td>
+            </tr>
+            <tr>
+              <td><kbd>⌘ P</kbd></td>
+              <td>ピン留め（ボードを離れても残す）</td>
+            </tr>
+            <tr>
+              <td><kbd>⌘ O</kbd></td>
+              <td>リンク・ファイル・画像を開く</td>
+            </tr>
+            <tr>
+              <td><kbd>⌘ E</kbd></td>
+              <td>テキスト変換して貼り付け（大小文字・トリム・JSON整形）</td>
+            </tr>
+            <tr>
+              <td><kbd>⌘ ⌫</kbd></td>
+              <td>履歴から削除（「すべて」表示中）/ ボードから外す（ボード表示中）</td>
+            </tr>
+            <tr>
+              <td><kbd>Esc</kbd></td>
+              <td>パネルを閉じる</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- 初回セットアップ -->
+  <section class="setup">
+    <div class="container">
+      <p class="section-label">初回セットアップ</p>
+      <h2 class="section-title">3ステップで使い始める。</h2>
+
+      <div class="setup-steps">
+        <div class="setup-step">
+          <div class="setup-num">1</div>
+          <div class="setup-body">
+            <h3>Klip-v0.14.0.zip をダウンロード・展開</h3>
+            <p>
+              <a href="https://github.com/RYUIYAMADA/klip/releases/latest">GitHub Releases</a> から
+              zip をダウンロードして展開し、<strong>Klip.app</strong> をアプリケーションフォルダに移動します。
+            </p>
+          </div>
+        </div>
+
+        <div class="setup-step">
+          <div class="setup-num">2</div>
+          <div class="setup-body">
+            <h3>初回起動 — 右クリック → 開く</h3>
+            <p>
+              Apple 公証未署名のため、初回は Klip.app を<strong>右クリック → 開く</strong>で起動します
+              （ダブルクリックではブロックされます）。
+              2回目以降は通常通りダブルクリックで起動できます。
+            </p>
+          </div>
+        </div>
+
+        <div class="setup-step setup-step--warning">
+          <div class="setup-num">3</div>
+          <div class="setup-body">
+            <h3>アクセシビリティ権限を許可する（必須）</h3>
+            <p>
+              クリップを <strong>⌘V で前のアプリへ貼り付ける</strong>ためにアクセシビリティ権限が必要です。
+              許可しないとコピーの記録はできますが貼り付けができません。
+            </p>
+            <div class="setup-path">
+              システム設定 → プライバシーとセキュリティ → アクセシビリティ → Klip をオン
+            </div>
+          </div>
+        </div>
+
+        <div class="setup-step">
+          <div class="setup-num">4</div>
+          <div class="setup-body">
+            <h3>ログイン時に自動起動を設定（任意）</h3>
+            <p>
+              メニューバーのアイコン → 設定 → 「ログイン時に自動起動」をオンにすると、
+              Mac を再起動しても常駐が続きます。
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- フッターCTA -->
+  <section class="footer-cta">
+    <div class="container">
+      <h2>今すぐダウンロードして使い始める</h2>
+      <p>無料・サブスクなし。コピーした全部が手元に残ります。</p>
+      <a class="cta-btn" href="https://github.com/RYUIYAMADA/klip/releases/latest">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+          <polyline points="7 10 12 15 17 10"/>
+          <line x1="12" y1="15" x2="12" y2="3"/>
+        </svg>
+        Klip-v0.14.0.zip をダウンロード
+      </a>
+    </div>
+  </section>
+
+  <!-- フッター -->
+  <footer class="footer">
+    <p>Klip v0.14.0 &copy; 2026 &nbsp;|&nbsp; <a href="https://github.com/RYUIYAMADA/klip">GitHub</a></p>
+  </footer>
+
+</body>
+</html>
